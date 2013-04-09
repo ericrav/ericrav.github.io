@@ -1,0 +1,93 @@
+body{
+    width: 100%;
+    padding-top: 40px;
+    text-align: center;
+}
+.navbar .brand{
+    margin: 0px;
+    padding: 10px 20px;
+}
+.nav{
+    right: 10px;
+}
+.navbar .right-nav, .right-nav li{
+    float: right;
+}
+.main-container{
+    margin: 0px auto;
+    width: 900px;
+}
+#positiveHeader p{
+    background-color: #AAFFAA;
+}
+#negativeHeader p{
+    background-color: #FFAAAA;
+}
+.judgeTop, .judgeTop div, .judgeArea, .judgeArea ul{
+    margin: 0px auto;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+}
+.columnHeader p{
+    width: 260px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+}
+p{
+    white-space: normal;
+}
+.judgeInstructions{
+    margin: 0px auto;
+}
+.judgeInstructions p, .unassigned ul{
+    width: 230px;
+    margin: 0px auto;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+.assigned,.unassigned {
+    margin: 0px;
+    height: 500px;
+}
+p.attName:first-child, .assigned li:first-child p.attStats{
+    margin: 10px auto 20px;
+}
+.assigned{
+    margin: 0px;
+    width: 300px;
+    border-radius:25px;
+    background-color: #AAAAAA;
+}
+.attribute p{
+    width: 120px;
+    padding: 5px 0px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius:25px;
+    background-color: #DDDDDD;
+    box-shadow: 5px 5px 5px #888888;
+}
+*[draggable=true] {
+  -moz-user-select:none;
+  -khtml-user-drag: element;
+  cursor: move;
+}
+.attStats{
+    display: none;
+}
+.assigned li:hover p.attStats{
+    display: block;
+    width: 120px;
+    text-align: center;
+    border-radius:25px;
+    background-color: #DDDDDD;
+    box-shadow: 5px 5px 5px #888888;
+}
+.assigned li:hover p.attName{
+    display: none;
+}
