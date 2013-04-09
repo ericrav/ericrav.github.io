@@ -69,7 +69,7 @@ ul{
     margin: 0px;
     width: 300px;
     border-radius:25px;
-    background-color: #AAAAAA;
+    background-color: #CCCCD8;
 }
 .attribute p{
     width: 120px;
@@ -97,5 +97,11 @@ ul{
     box-shadow: 5px 5px 5px #888888;
 }
 .assigned li:hover p.attName{
+    display: none;
+}
+.buttonArea{
+    margin-top: -40px;
+}
+#submitBtn{
     display: none;
 }

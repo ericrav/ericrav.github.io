@@ -16,9 +16,10 @@ function drag(ev) {
 } 
 function dragEnd(ev)
 {
-document.getElementById("positive").style.backgroundColor = "#AAAAAA";
-document.getElementById("negative").style.backgroundColor = "#AAAAAA";
+document.getElementById("positive").style.backgroundColor = "#CCCCD8";
+document.getElementById("negative").style.backgroundColor = "#CCCCD8";
     $("#"+ev.target.id).draggable("disable");
+    submitReady();
 }
 function dropNegative(ev)
 {
@@ -37,4 +38,13 @@ function dropPositive(ev)
 ev.preventDefault();
 var data=ev.dataTransfer.getData("Text");
 document.getElementById("positive").appendChild(document.getElementById(data));
+}
+function submitReady() {
+    if ($(".unassigned li").size() < 10) {
+	if (!$("#submitBtn").is(":visible")) {
+	    $("#submitBtn").fadeIn("slow");
+	}
+    } else {
+	$("#submitBtn").hide();
+}
 }
