@@ -17,6 +17,10 @@ body{
     margin: 0px auto;
     width: 900px;
 }
+.soundplayer{
+    width: 900px;
+    height: 171px;
+}
 #positiveHeader p{
     background-color: #AAFFAA;
 }
@@ -28,6 +32,9 @@ body{
     text-align: center;
     display: inline-block;
     white-space: nowrap;
+}
+.judgeArea{
+    margin-top: 5px;
 }
 .columnHeader p{
     width: 260px;
@@ -54,8 +61,9 @@ ul{
     margin: 0px;
     height: 500px;
 }
-p.attName:first-child, .assigned li:first-child p.attStats{
-    margin: 10px auto 20px;
+
+.attribute{
+    padding: 10px;
 }
 .assigned{
     margin: 0px;
@@ -66,7 +74,7 @@ p.attName:first-child, .assigned li:first-child p.attStats{
 .attribute p{
     width: 120px;
     padding: 5px 0px;
-    margin: 20px auto;
+    margin: 0px auto;
     text-align: center;
     border-radius:25px;
     background-color: #DDDDDD;

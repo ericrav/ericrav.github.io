@@ -1,0 +1,48 @@
+body{
+    width: 100%;
+}
+.judgeTop, .judgeTop div, .judgeArea, .judgeArea ul{
+    margin: 0px auto;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+}
+.center-container{
+
+}
+.main-container{
+    margin: 0px auto;
+
+}
+.columnHeader p{
+    width: 260px;
+    padding: 20px;
+    background-color: #BBBBBB;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+}
+p{
+    white-space: normal;
+}
+.judgeInstructions{
+    margin: 0px auto;
+}
+.judgeInstructions p, .unassigned ul{
+    width: 230px;
+    margin: 0px auto;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+.assigned,.unassigned {
+    margin: 0px;
+    height: 600px;
+}
+.assigned{
+    margin: 0px;
+    height: 600px;
+    width: 300px;
+    background-color: #AAAAAA;
+}

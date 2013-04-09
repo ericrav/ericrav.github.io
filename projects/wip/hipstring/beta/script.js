@@ -1,3 +1,6 @@
+$(document).ready(function () {
+   
+});
 
 function allowDrop(ev)
 {
@@ -5,16 +8,17 @@ ev.preventDefault();
 
 }
 
-function drag(ev)
-{
-ev.dataTransfer.setData("Text",ev.target.id);
-document.getElementById("positive").style.backgroundColor = "#A0FFA0";
-document.getElementById("negative").style.backgroundColor = "#FF6060";
-}
+function drag(ev) {
+    ev.dataTransfer.setData("Text",ev.target.id);
+    $("#"+ev.target.id).draggable();
+    document.getElementById("positive").style.backgroundColor = "#A0FFA0";
+    document.getElementById("negative").style.backgroundColor = "#FF6060";
+} 
 function dragEnd(ev)
 {
 document.getElementById("positive").style.backgroundColor = "#AAAAAA";
 document.getElementById("negative").style.backgroundColor = "#AAAAAA";
+    $("#"+ev.target.id).draggable("disable");
 }
 function dropNegative(ev)
 {

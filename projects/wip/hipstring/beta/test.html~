@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="navbar">
+    </div>
+    <div class="main-container">
+    <div class="soundplaer"></div>
+    <div class="judgeTop"><span class="center-container">
+      <div id="negativeHeader" class="columnHeader">
+	<p>Needs Work</p>
+      </div>
+      <div class="judgeInstructions">
+	<p>Rate the music by dragging and 
+      dropping each individual attribute of the sound to the left or right.
+	</p>
+      </div>
+      <div id="positiveHeader" class="columnHeader">
+	<p>Great Job</p>
+      </div>
+    </span></div>
+    <div class="judgeArea"><span class="center-container">
+      <ul id="negative" class="assigned"></ul>
+      <ul id="unassigned" class="unassigned">
+	<li id="melody" class="attribute" draggable="true">
+	  <p>Melody</p>
+	  <div id="melodyStats" class="attStats"></div>
+	</li>
+	<li id="harmony" class="attribute" draggable="true">
+	  <p>Harmony</p>
+	  <div id="harmonyStats" class="attStats"></div>
+	</li>
+	<li id="rhythm" class="attribute" draggable="true">
+	  <p>Rhythm</p>
+	  <div id="rhythmStats" class="attStats"></div>
+	</li>
+	<li id="tempo" class="attribute" draggable="true">
+	  <p>Tempo</p>
+	  <div id="tempoStats" class="attStats"></div>
+	</li>
+	<li id="instrumentation" class="attribute" draggable="true">
+	  <p>Instrumentation</p>
+	  <div id="instrumentationStats" class="attStats"></div>
+	</li>
+	<li id="tone" class="attribute" draggable="true">
+	  <p>Tone</p>
+	  <div id="toneStats" class="attStats"></div>
+	</li>
+	<li id="production" class="attribute" draggable="true">
+	  <p>Production</p>
+	  <div id="productionStats" class="attStats"></div>
+	</li>
+	<li id="dynamics" class="attribute" draggable="true">
+	  <p>Dynamics</p>
+	  <div id="dynamicsStats" class="attStats"></div>
+	</li>
+	<li id="originality" class="attribute" draggable="true">
+	  <p>Originality</p>
+	  <div id="originalityStats" class="attStats"></div>
+	</li>
+	<li id="form" class="attribute" draggable="true">
+	  <p>Form</p>
+	  <div id="formStats" class="attStats"></div>
+	</li>
+      </ul>
+      <ul id="positive" class="assigned"></ul>
+    </span></div></div>
+  </body>
+</html>
