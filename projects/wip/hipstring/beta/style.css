@@ -10,9 +10,6 @@ body{
 .nav{
     right: 10px;
 }
-.navbar .right-nav, .right-nav li{
-    float: right;
-}
 .main-container{
     margin: 0px auto;
     width: 900px;
