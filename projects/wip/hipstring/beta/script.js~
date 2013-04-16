@@ -1,17 +1,67 @@
+$(document).ready(function () {
+    $(".attName").tooltip({delay: {show: 1000, hide:100}});
+    $(".clickVote").mouseleave(hideClickVote("melody"));
+});
 
 function allowDrop(ev)
 {
 ev.preventDefault();
+
 }
 
-function drag(ev)
+function drag(ev) {
+    hideClickVote(ev.target.id);
+    ev.dataTransfer.setData("Text",ev.target.id);
+    $("#"+ev.target.id).draggable();
+    document.getElementById("positive").style.backgroundColor = "#A0FFA0";
+    document.getElementById("negative").style.backgroundColor = "#FF6060";
+} 
+function dragEnd(ev)
 {
-ev.dataTransfer.setData("Text",ev.target.id);
+document.getElementById("positive").style.backgroundColor = "#CCCCD8";
+document.getElementById("negative").style.backgroundColor = "#CCCCD8";
+    $("#"+ev.target.id).draggable("disable");
+    submitReady();
 }
-
-function drop(ev)
+function dropNegative(ev)
 {
 ev.preventDefault();
 var data=ev.dataTransfer.getData("Text");
-ev.target.appendChild(document.getElementById(data));
+document.getElementById("negative").appendChild(document.getElementById(data));
+}
+function dropNeutral(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+document.getElementById("unassigned").appendChild(document.getElementById(data));
+}
+function dropPositive(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+document.getElementById("positive").appendChild(document.getElementById(data));
+}
+function movePositive(id) {
+    document.getElementById("positive").appendChild(document.getElementById(id));
+}
+function submitReady() {
+    if ($(".unassigned li").size() < 10) {
+	if (!$("#submitBtn").is(":visible")) {
+	    $("#submitBtn").fadeIn("slow");
+	}
+    } else {
+	$("#submitBtn").hide();
+}
+}
+function showClickVote(id) {
+    if ($("#unassigned #" + id + " .attName").is(":visible")) {
+	$("#" + id + " .clickVote").addClass("visible");
+	$("#" + id + " .attName").addClass("invisible").removeClass("visible");
+    }
+}
+function hideClickVote(id) {
+    if (!$("#" + id + " .attName").is(":visible")) {
+	$("#" + id + " .clickVote").removeClass("visible");
+	$("#" + id + " .attName").addClass("visible").removeClass("invisible");
+    }
 }

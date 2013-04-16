@@ -82,10 +82,25 @@ ul{
   -khtml-user-drag: element;
   cursor: move;
 }
-.attStats{
+
+.attStats, .clickVote{
     display: none;
 }
-.assigned li:hover p.attStats{
+li:hover .visible{
+    display: inline-block;
+}
+
+.clickVote{
+    margin: auto;
+    text-align: center;
+}
+.clickVote a{
+    cursor: pointer;
+}
+.clickVote i{
+    margin: 0px 10px;
+}
+.assigned li:hover p.attStats, .clickVote:hover{
     display: block;
     width: 120px;
     text-align: center;
@@ -100,5 +115,14 @@ ul{
     margin-top: -40px;
 }
 #submitBtn{
+    display: none;
+}
+.unassigned .icon-remove {
+    visibility: hidden;
+}
+.assigned .icon-remove{
+    visibility: visible;
+}
+.assigned li:hover p.invisiblehover, .unassigned li:hover p.invisiblehover{
     display: none;
 }

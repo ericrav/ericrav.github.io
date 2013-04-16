@@ -10,9 +10,6 @@ body{
 .nav{
     right: 10px;
 }
-.navbar .right-nav, .right-nav li{
-    float: right;
-}
 .main-container{
     margin: 0px auto;
     width: 900px;
@@ -85,10 +82,25 @@ ul{
   -khtml-user-drag: element;
   cursor: move;
 }
-.attStats{
+
+.attStats, .clickVote{
     display: none;
 }
-.assigned li:hover p.attStats{
+.visible{
+    display: inline-block;
+}
+
+.clickVote{
+    margin: auto;
+    text-align: center;
+}
+.clickVote a{
+    cursor: pointer;
+}
+.clickVote i{
+    margin: 0px 10px;
+}
+.assigned li:hover p.attStats, .clickVote:hover{
     display: block;
     width: 120px;
     text-align: center;
@@ -103,5 +115,8 @@ ul{
     margin-top: -40px;
 }
 #submitBtn{
+    display: none;
+}
+.invisible{
     display: none;
 }
