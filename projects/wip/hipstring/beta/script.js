@@ -46,14 +46,17 @@ document.getElementById("positive").appendChild(document.getElementById(data));
 function movePositive(id) {
     document.getElementById("positive").appendChild(document.getElementById(id));
     $("li p").removeClass("invisiblehover").removeClass("visible");
+    submitReady();
 }
 function moveNegative(id) {
     document.getElementById("negative").appendChild(document.getElementById(id));
     $("li p").removeClass("invisiblehover").removeClass("visible");
+    submitReady();
 }
 function moveNeutral(id) {
     document.getElementById("unassigned").appendChild(document.getElementById(id));
     $("li p").removeClass("invisiblehover").removeClass("visible");
+    submitReady();
 }
 function submitReady() {
     if ($(".unassigned li").size() < 10) {

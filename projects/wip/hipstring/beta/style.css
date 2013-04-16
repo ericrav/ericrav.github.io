@@ -100,6 +100,9 @@ li:hover .visible{
 .clickVote i{
     margin: 0px 10px;
 }
+.clickVote a:hover i{
+    background-color: #EEEEFF;
+}
 .assigned li:hover p.attStats, .clickVote:hover{
     display: block;
     width: 120px;
