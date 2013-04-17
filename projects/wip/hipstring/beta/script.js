@@ -96,12 +96,16 @@ function increaseVotes() {
     var negatives = $("#negative .n");
     var val;
     for (var i = 0; i < positives.length; i++) {
-	val = parseInt($(positives[i]).html(), 10);
-	$(positives[i]).html(val+1);
+	if ($(positives[i]).parent().parent().attr("draggable") == "true") {
+	    val = parseInt($(positives[i]).html(), 10);
+	    $(positives[i]).html(val+1);
+	}
     }
     for (var i = 0; i < negatives.length; i++) {
-	val = parseInt($(negatives[i]).html(), 10);
-	$(negatives[i]).html(val+1);
+	if ($(negatives[i]).parent().parent().attr("draggable") == "true") {
+	    val = parseInt($(negatives[i]).html(), 10);
+	    $(negatives[i]).html(val+1);
+	}
     }
     var items = $(".assigned li");
     for (var i = 0; i < items.length; i++) {
