@@ -56,87 +56,152 @@ ondragover="allowDrop(event)"></ul>
       <ul id="unassigned" class="unassigned span4" ondrop="dropNeutral(event)"
 ondragover="allowDrop(event)">
 	<li id="melody" class="attribute" draggable="true" 
-	    ondragstart="drag(event)" ondragend="dragEnd(event)" >
-	  <p data-toggle="tooltip" rel="tooltip" title="Melody is a" class="attName" onclick="showClickVote('melody')">Melody</p>
-	  <p id="melodyStats" class="attStats">
+	    ondragstart="drag(event)" ondragend="dragEnd(event)" data-toggle="tooltip" rel="tooltip" title="Melody is a" >
+	  <p  class="attName" onclick="showClickVote('melody')">Melody</p>
+	  <p id="melodyStats" class="attStats" 
+	     onclick="showClickVote2('melody')">
 	    <i class="icon-thumbs-up"></i> <span>5</span>
 	    <i class="icon-thumbs-down"></i> <span>4</span>
 	    </p>
 	  <p class="clickVote" onclick="hideClickVote('melody')">
-	    <a onclick="movePositive('melody')"><i class="icon-thumbs-up"></i></a>&nbsp;
-	    <a><i class="icon-thumbs-down"></i></a>
+	    <a onclick="movePositive('melody')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('melody')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('melody')"><i class="icon-thumbs-down"></i></a>
 	  </p>
 	</li>
 	<li id="harmony" class="attribute" draggable="true"
 	    ondragstart="drag(event)" ondragend="dragEnd(event)">
-	  <p class="attName">Harmony</p>
-	  <p id="harmonyStats" class="attStats">
+	  <p class="attName" onclick="showClickVote('harmony')">Harmony</p>
+	  <p id="harmonyStats" class="attStats"
+	     onclick="showClickVote2('harmony')">
 	    <i class="icon-thumbs-up"></i> <span>5</span>
 	    <i class="icon-thumbs-down"></i> <span>4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('harmony')">
+	    <a onclick="movePositive('harmony')"><i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('harmony')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('harmony')"><i class="icon-thumbs-down"></i></a>
 	  </p>
 	</li>
 	<li id="rhythm" class="attribute" draggable="true"
 	    ondragstart="drag(event)" ondragend="dragEnd(event)">
-	  <p class="attName">Rhythm</p>
-	  <p id="rhythmStats" class="attStats">
+	  <p class="attName" onclick="showClickVote('rhythm')">Rhythm</p>
+	  <p id="rhythmStats" class="attStats"
+	     onclick="showClickVote2('rhythm')">
 	    <i class="icon-thumbs-up"></i> <span>5</span>
 	    <i class="icon-thumbs-down"></i> <span>4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('rhythm')">
+	    <a onclick="movePositive('rhythm')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('rhythm')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('rhythm')"><i class="icon-thumbs-down"></i></a>
 	  </p>
 	</li>
 	<li id="tempo" class="attribute" draggable="true"
 	    ondragstart="drag(event)" ondragend="dragEnd(event)">
-	  <p class="attName">Tempo</p>
-	  <p id="tempoStats" class="attStats">
+	  <p class="attName" onclick="showClickVote('tempo')">Tempo</p>
+	  <p id="tempoStats" class="attStats"
+	     onclick="showClickVote2('tempo')">
 	    <i class="icon-thumbs-up"></i> <span>5</span>
 	    <i class="icon-thumbs-down"></i> <span>4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('tempo')">
+	    <a onclick="movePositive('tempo')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('tempo')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('tempo')"><i class="icon-thumbs-down"></i></a>
 	  </p>
 	</li>
 	<li id="instrumentation" class="attribute" draggable="true"
 	    ondragstart="drag(event)" ondragend="dragEnd(event)">
-	  <p class="attName">Instrumentation</p>
-	  <p id="instrumentationStats" class="attStats">
+	  <p class="attName" onclick="showClickVote('instrumentation')">Instrumentation</p>
+	  <p id="instrumentationStats" class="attStats"
+	     onclick="showClickVote2('instrumentation')">
 	    <i class="icon-thumbs-up"></i> <span>5</span>
 	    <i class="icon-thumbs-down"></i> <span>4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('instrumentation')">
+	    <a onclick="movePositive('instrumentation')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('instrumentation')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('instrumentation')"><i class="icon-thumbs-down"></i></a>
 	  </p>
 	</li>
 	<li id="tone" class="attribute" draggable="true"
 	    ondragstart="drag(event)" ondragend="dragEnd(event)">
-	  <p class="attName">Tone</p>
-	  <p id="toneStats" class="attStats">
+	  <p class="attName" onclick="showClickVote('tone')">Tone</p>
+	  <p id="toneStats" class="attStats"
+	     onclick="showClickVote2('tone')">
 	    <i class="icon-thumbs-up"></i> <span>5</span>
 	    <i class="icon-thumbs-down"></i> <span>4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('tone')">
+	    <a onclick="movePositive('tone')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('tone')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('tone')"><i class="icon-thumbs-down"></i></a>
 	  </p>
 	</li>
 	<li id="production" class="attribute" draggable="true"
 	    ondragstart="drag(event)" ondragend="dragEnd(event)">
-	  <p class="attName">Production</p>
-	  <p id="productionStats" class="attStats">
+	  <p class="attName" onclick="showClickVote('production')">Production</p>
+	  <p id="productionStats" class="attStats"
+	     onclick="showClickVote2('production')">
 	    <i class="icon-thumbs-up"></i> <span>5</span>
 	    <i class="icon-thumbs-down"></i> <span>4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('production')">
+	    <a onclick="movePositive('production')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('production')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('production')"><i class="icon-thumbs-down"></i></a>
 	  </p>
 	</li>
 	<li id="dynamics" class="attribute" draggable="true"
 	    ondragstart="drag(event)" ondragend="dragEnd(event)">
-	  <p class="attName">Dynamics</p>
-	  <p id="dynamicsStats" class="attStats">
+	  <p class="attName" onclick="showClickVote('dynamics')">Dynamics</p>
+	  <p id="dynamicsStats" class="attStats"
+	     onclick="showClickVote2('dynamics')">
 	    <i class="icon-thumbs-up"></i> <span>5</span>
 	    <i class="icon-thumbs-down"></i> <span>4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('dynamics')">
+	    <a onclick="movePositive('dynamics')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('dynamics')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('dynamics')"><i class="icon-thumbs-down"></i></a>
 	  </p>
 	</li>
 	<li id="originality" class="attribute" draggable="true"
 	    ondragstart="drag(event)" ondragend="dragEnd(event)">
-	  <p class="attName">Originality</p>
-	  <p id="originalityStats" class="attStats">
+	  <p class="attName" onclick="showClickVote('originality')">Originality</p>
+	  <p id="originalityStats" class="attStats"
+	     onclick="showClickVote2('originality')">
 	    <i class="icon-thumbs-up"></i> <span>5</span>
 	    <i class="icon-thumbs-down"></i> <span>4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('originality')">
+	    <a onclick="movePositive('originality')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('originality')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('originality')"><i class="icon-thumbs-down"></i></a>
 	  </p>
 	</li>
 	<li id="form" class="attribute" draggable="true"
 	    ondragstart="drag(event)" ondragend="dragEnd(event)">
-	  <p class="attName">Form</p>
-	  <p id="formStats" class="attStats">
+	  <p class="attName" onclick="showClickVote('form')">Form</p>
+	  <p id="formStats" class="attStats"
+	     onclick="showClickVote2('form')">
 	    <i class="icon-thumbs-up"></i> <span>5</span>
 	    <i class="icon-thumbs-down"></i> <span>4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('form')">
+	    <a onclick="movePositive('form')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('form')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('form')"><i class="icon-thumbs-down"></i></a>
 	  </p>
 	</li>
       </ul>
