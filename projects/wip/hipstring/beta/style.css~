@@ -86,7 +86,7 @@ ul{
 .attStats, .clickVote{
     display: none;
 }
-.visible{
+li:hover .visible{
     display: inline-block;
 }
 
@@ -99,6 +99,9 @@ ul{
 }
 .clickVote i{
     margin: 0px 10px;
+}
+.clickVote a:hover i{
+    background-color: #EEEEFF;
 }
 .assigned li:hover p.attStats, .clickVote:hover{
     display: block;
@@ -117,6 +120,12 @@ ul{
 #submitBtn{
     display: none;
 }
-.invisible{
+.unassigned .icon-remove {
+    visibility: hidden;
+}
+.assigned .icon-remove{
+    visibility: visible;
+}
+.assigned li:hover p.invisiblehover, .unassigned li:hover p.invisiblehover{
     display: none;
 }

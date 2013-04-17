@@ -75,7 +75,8 @@ function showClickVote(id) {
     }
 }
 function showClickVote2(id) {
-    if ($(".assigned #" + id + " .attStats").is(":visible")) {
+    if ($(".assigned #" + id + " .attStats").is(":visible") && 
+	$("#"+id).attr("draggable") == "true") {
 	$("li p").removeClass("invisiblehover").removeClass("visible");
 	$("#" + id + " .clickVote").addClass("visible");
 	$("#" + id + " .attName").addClass("invisiblehover").removeClass("visible");
@@ -101,5 +102,13 @@ function increaseVotes() {
     for (var i = 0; i < negatives.length; i++) {
 	val = parseInt($(negatives[i]).html(), 10);
 	$(negatives[i]).html(val+1);
+    }
+    var items = $(".assigned li");
+    for (var i = 0; i < items.length; i++) {
+	$(items[i]).attr("draggable","false");
+    }
+    var ps = $(".assigned li p");
+    for (var i = 0; i < ps.length; i++) {
+	$(ps[i]).addClass("locked");
     }
 }

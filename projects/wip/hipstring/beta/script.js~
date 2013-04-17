@@ -89,3 +89,17 @@ function hideClickVote(id) {
 	$("#" + id + " .attStats").removeClass("invisiblehover");
     }
 }
+
+function increaseVotes() {
+    var positives = $("#positive .y");
+    var negatives = $("#negative .n");
+    var val;
+    for (var i = 0; i < positives.length; i++) {
+	val = parseInt($(positives[i]).html(), 10);
+	$(positives[i]).html(val+1);
+    }
+    for (var i = 0; i < negatives.length; i++) {
+	val = parseInt($(negatives[i]).html(), 10);
+	$(negatives[i]).html(val+1);
+    }
+}
