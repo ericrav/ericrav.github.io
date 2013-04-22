@@ -56,7 +56,7 @@ ondragover="allowDrop(event)"></ul>
       <ul id="unassigned" class="unassigned span4" ondrop="dropNeutral(event)"
 ondragover="allowDrop(event)">
 	<li id="melody" class="attribute" draggable="true" 
-	    ondragstart="drag(event)" ondragend="dragEnd(event)" data-toggle="tooltip" rel="tooltip" title="Melody is a" >
+	    ondragstart="drag(event)" ondragend="dragEnd(event)" data-toggle="tooltip" rel="tooltip" title='The main tune or most prominent sounds of the music. The "horizontal" aspect of the music that moves along with time.' >
 	  <p  class="attName" onclick="showClickVote('melody')">Melody</p>
 	  <p id="melodyStats" class="attStats" 
 	     onclick="showClickVote2('melody')">
@@ -71,7 +71,8 @@ ondragover="allowDrop(event)">
 	  </p>
 	</li>
 	<li id="harmony" class="attribute" draggable="true"
-	    ondragstart="drag(event)" ondragend="dragEnd(event)">
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='The simultaneous sounds that create chords or richer sound. The texture of the music, and how all the sounds interact "vertically."'>
 	  <p class="attName" onclick="showClickVote('harmony')">Harmony</p>
 	  <p id="harmonyStats" class="attStats"
 	     onclick="showClickVote2('harmony')">
@@ -85,7 +86,8 @@ ondragover="allowDrop(event)">
 	  </p>
 	</li>
 	<li id="rhythm" class="attribute" draggable="true"
-	    ondragstart="drag(event)" ondragend="dragEnd(event)">
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='The pattern or placement of the sounds in time. Also, the beat and pulse of the music.'>
 	  <p class="attName" onclick="showClickVote('rhythm')">Rhythm</p>
 	  <p id="rhythmStats" class="attStats"
 	     onclick="showClickVote2('rhythm')">
@@ -100,7 +102,8 @@ ondragover="allowDrop(event)">
 	  </p>
 	</li>
 	<li id="tempo" class="attribute" draggable="true"
-	    ondragstart="drag(event)" ondragend="dragEnd(event)">
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='The speed or pace of the music. It can be consistent or change throughout the music.'>
 	  <p class="attName" onclick="showClickVote('tempo')">Tempo</p>
 	  <p id="tempoStats" class="attStats"
 	     onclick="showClickVote2('tempo')">
@@ -115,7 +118,8 @@ ondragover="allowDrop(event)">
 	  </p>
 	</li>
 	<li id="instrumentation" class="attribute" draggable="true"
-	    ondragstart="drag(event)" ondragend="dragEnd(event)">
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='The instruments or sounds used in the piece. How do they suit the nature of the instrument and how do the sounds fit in together? Is each part of the music played by the right sound/instrument?'>
 	  <p class="attName" onclick="showClickVote('instrumentation')">Instrumentation</p>
 	  <p id="instrumentationStats" class="attStats"
 	     onclick="showClickVote2('instrumentation')">
@@ -130,7 +134,8 @@ ondragover="allowDrop(event)">
 	  </p>
 	</li>
 	<li id="tone" class="attribute" draggable="true"
-	    ondragstart="drag(event)" ondragend="dragEnd(event)">
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='The way the music and each part of it sounds to the ear and how distinguishable each sound is. Also known as timbre or tone color.'>
 	  <p class="attName" onclick="showClickVote('tone')">Tone</p>
 	  <p id="toneStats" class="attStats"
 	     onclick="showClickVote2('tone')">
@@ -145,7 +150,8 @@ ondragover="allowDrop(event)">
 	  </p>
 	</li>
 	<li id="production" class="attribute" draggable="true"
-	    ondragstart="drag(event)" ondragend="dragEnd(event)">
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='The quality of the recording. How the different frequencies and levels of sound interact. (The music may be well written but sound poor in this recording due to the production).'>
 	  <p class="attName" onclick="showClickVote('production')">Production</p>
 	  <p id="productionStats" class="attStats"
 	     onclick="showClickVote2('production')">
@@ -160,7 +166,8 @@ ondragover="allowDrop(event)">
 	  </p>
 	</li>
 	<li id="dynamics" class="attribute" draggable="true"
-	    ondragstart="drag(event)" ondragend="dragEnd(event)">
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='The loudness or softness of the music and how it changes.'>
 	  <p class="attName" onclick="showClickVote('dynamics')">Dynamics</p>
 	  <p id="dynamicsStats" class="attStats"
 	     onclick="showClickVote2('dynamics')">
@@ -175,7 +182,8 @@ ondragover="allowDrop(event)">
 	  </p>
 	</li>
 	<li id="originality" class="attribute" draggable="true"
-	    ondragstart="drag(event)" ondragend="dragEnd(event)">
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='How creative the music is overall.'>
 	  <p class="attName" onclick="showClickVote('originality')">Originality</p>
 	  <p id="originalityStats" class="attStats"
 	     onclick="showClickVote2('originality')">
@@ -190,7 +198,8 @@ ondragover="allowDrop(event)">
 	  </p>
 	</li>
 	<li id="form" class="attribute" draggable="true"
-	    ondragstart="drag(event)" ondragend="dragEnd(event)">
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title="The overall structure of the music. How it's broken into parts, how it moves from part to part, and how all the other elements interact.">
 	  <p class="attName" onclick="showClickVote('form')">Form</p>
 	  <p id="formStats" class="attStats"
 	     onclick="showClickVote2('form')">

@@ -129,3 +129,7 @@ li:hover .visible{
 .assigned li:hover p.invisiblehover, .unassigned li:hover p.invisiblehover{
     display: none;
 }
+.assigned li p.locked{
+    background-color: #CCCCCC;
+    box-shadow: 2px 2px 2px #888888;
+}

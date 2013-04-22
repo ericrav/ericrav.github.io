@@ -60,8 +60,8 @@ ondragover="allowDrop(event)">
 	  <p  class="attName" onclick="showClickVote('melody')">Melody</p>
 	  <p id="melodyStats" class="attStats" 
 	     onclick="showClickVote2('melody')">
-	    <i class="icon-thumbs-up"></i> <span>5</span>
-	    <i class="icon-thumbs-down"></i> <span>4</span>
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
 	    </p>
 	  <p class="clickVote" onclick="hideClickVote('melody')">
 	    <a onclick="movePositive('melody')">
@@ -75,8 +75,8 @@ ondragover="allowDrop(event)">
 	  <p class="attName" onclick="showClickVote('harmony')">Harmony</p>
 	  <p id="harmonyStats" class="attStats"
 	     onclick="showClickVote2('harmony')">
-	    <i class="icon-thumbs-up"></i> <span>5</span>
-	    <i class="icon-thumbs-down"></i> <span>4</span>
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
 	  </p>
 	  <p class="clickVote" onclick="hideClickVote('harmony')">
 	    <a onclick="movePositive('harmony')"><i class="icon-thumbs-up"></i></a>
@@ -89,8 +89,8 @@ ondragover="allowDrop(event)">
 	  <p class="attName" onclick="showClickVote('rhythm')">Rhythm</p>
 	  <p id="rhythmStats" class="attStats"
 	     onclick="showClickVote2('rhythm')">
-	    <i class="icon-thumbs-up"></i> <span>5</span>
-	    <i class="icon-thumbs-down"></i> <span>4</span>
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
 	  </p>
 	  <p class="clickVote" onclick="hideClickVote('rhythm')">
 	    <a onclick="movePositive('rhythm')">
@@ -104,8 +104,8 @@ ondragover="allowDrop(event)">
 	  <p class="attName" onclick="showClickVote('tempo')">Tempo</p>
 	  <p id="tempoStats" class="attStats"
 	     onclick="showClickVote2('tempo')">
-	    <i class="icon-thumbs-up"></i> <span>5</span>
-	    <i class="icon-thumbs-down"></i> <span>4</span>
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
 	  </p>
 	  <p class="clickVote" onclick="hideClickVote('tempo')">
 	    <a onclick="movePositive('tempo')">
@@ -119,8 +119,8 @@ ondragover="allowDrop(event)">
 	  <p class="attName" onclick="showClickVote('instrumentation')">Instrumentation</p>
 	  <p id="instrumentationStats" class="attStats"
 	     onclick="showClickVote2('instrumentation')">
-	    <i class="icon-thumbs-up"></i> <span>5</span>
-	    <i class="icon-thumbs-down"></i> <span>4</span>
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
 	  </p>
 	  <p class="clickVote" onclick="hideClickVote('instrumentation')">
 	    <a onclick="movePositive('instrumentation')">
@@ -134,8 +134,8 @@ ondragover="allowDrop(event)">
 	  <p class="attName" onclick="showClickVote('tone')">Tone</p>
 	  <p id="toneStats" class="attStats"
 	     onclick="showClickVote2('tone')">
-	    <i class="icon-thumbs-up"></i> <span>5</span>
-	    <i class="icon-thumbs-down"></i> <span>4</span>
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
 	  </p>
 	  <p class="clickVote" onclick="hideClickVote('tone')">
 	    <a onclick="movePositive('tone')">
@@ -149,8 +149,8 @@ ondragover="allowDrop(event)">
 	  <p class="attName" onclick="showClickVote('production')">Production</p>
 	  <p id="productionStats" class="attStats"
 	     onclick="showClickVote2('production')">
-	    <i class="icon-thumbs-up"></i> <span>5</span>
-	    <i class="icon-thumbs-down"></i> <span>4</span>
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
 	  </p>
 	  <p class="clickVote" onclick="hideClickVote('production')">
 	    <a onclick="movePositive('production')">
@@ -164,8 +164,8 @@ ondragover="allowDrop(event)">
 	  <p class="attName" onclick="showClickVote('dynamics')">Dynamics</p>
 	  <p id="dynamicsStats" class="attStats"
 	     onclick="showClickVote2('dynamics')">
-	    <i class="icon-thumbs-up"></i> <span>5</span>
-	    <i class="icon-thumbs-down"></i> <span>4</span>
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
 	  </p>
 	  <p class="clickVote" onclick="hideClickVote('dynamics')">
 	    <a onclick="movePositive('dynamics')">
@@ -179,8 +179,8 @@ ondragover="allowDrop(event)">
 	  <p class="attName" onclick="showClickVote('originality')">Originality</p>
 	  <p id="originalityStats" class="attStats"
 	     onclick="showClickVote2('originality')">
-	    <i class="icon-thumbs-up"></i> <span>5</span>
-	    <i class="icon-thumbs-down"></i> <span>4</span>
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
 	  </p>
 	  <p class="clickVote" onclick="hideClickVote('originality')">
 	    <a onclick="movePositive('originality')">
@@ -194,8 +194,8 @@ ondragover="allowDrop(event)">
 	  <p class="attName" onclick="showClickVote('form')">Form</p>
 	  <p id="formStats" class="attStats"
 	     onclick="showClickVote2('form')">
-	    <i class="icon-thumbs-up"></i> <span>5</span>
-	    <i class="icon-thumbs-down"></i> <span>4</span>
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
 	  </p>
 	  <p class="clickVote" onclick="hideClickVote('form')">
 	    <a onclick="movePositive('form')">
@@ -209,6 +209,6 @@ ondragover="allowDrop(event)">
 ondragover="allowDrop(event)"></ul>
     </div>
     <div class="buttonArea">
-    <button id="submitBtn" class="btn btn-primary">Lock In</btn></div></div>
+    <button id="submitBtn" class="btn btn-primary" onclick="increaseVotes()">Lock In</btn></div></div>
   </body>
 </html>
