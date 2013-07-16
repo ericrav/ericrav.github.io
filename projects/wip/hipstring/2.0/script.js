@@ -14,6 +14,9 @@ $(document).ready(function () {
 	$(".voting a.selected").removeClass("selected");
 	$(this).addClass("selected");
 	voting = $(this).attr("id");
+	var $elements = $(".elements li."+voting);
+	$elements.removeClass(voting);
+	setTimeout(function(){$elements.addClass(voting);},115);
     });
     $(".elements li").click(function() {
 	if ($(this).hasClass(voting)) {
