@@ -1,6 +1,7 @@
 var scroll;
 var lastScroll = 0;
 var scrolledDown = false;
+var ready = true;
 var windowHeight;
 var windowWidth;
 var nameWidth;
@@ -58,15 +59,19 @@ function scrollTitle() {
     if (scroll < limit) {
 	if (scrolledDown) {
 	    moveTitleBack();
+	    scrolledDown = false;
 	}
-	scrolledDown = false;
-	$("#name").css({
-	    "font-size": (72 - scroll*(36 / (limit))) + "px",
+	if(ready) {
+	var newSize = (72 - scroll*(36 / (limit)));
+	var time = Math.log(1+Math.abs(parseInt($("#name").css("font-size")) - newSize))*60;
+	    if (time>120) time=120;
+	$("#name").stop().animate({
+	    "font-size": newSize + "px",
 	    "letter-spacing": (25 - scroll*(15 / (limit))) + "px",
 	    "top": (windowHeight / 2) - ($("#name").height() / 2) - 
 		((windowHeight / 2) - ($("#name").height() / 2) - 10)*(scroll/limit) + "px"
-	});
-	
+	},time+1);
+	}
     } else if (scroll >= limit) {
 	if (!(scrolledDown)) {
 	    moveTitle();
@@ -91,17 +96,23 @@ function moveTitle() {
 	opacity: 1
     });
     $("#name").animate({
-	left: $("#nametext").width() - $("#topbar").width() + 40 + parseInt($("#name").css('font-size'),10) + "px",
+	//left: $("#nametext").width() - $("#topbar").width() + 40 + parseInt($("#name").css('font-size'),10) + "px",
 	top: "15px",
 	"font-size": "36px",
 	letterSpacing: "10px"
-    },function() {
-	$("#name").css({
-	    "text-align": "left",
-	    "left": "40px",
-	    "right": "500px",
-	    "top": "15px",
-	});
+    }, "fast", function() {
+	$("#nametext").animate({
+	    left: $(window).width() / -2 + $("#nametext").width() / 2 + 40 + "px"
+	    }, function() {
+		$("#name").css({
+		    "text-align": "left",
+		    "left": "40px",
+		    "right": "500px",
+		    "top": "15px",
+		});
+		$("#nametext").css({"left":"0px"});
+		ready=false;
+	    });
     });
 }
 
@@ -109,13 +120,17 @@ function moveTitleBack() {
     $("#nav").animate({
 	 opacity: 0
     });
-    $("#name").animate({
-	left: (windowWidth / 2) - ($("#nametext").width() / 2) - 40 + "px",
-    },function() {
-    $("#name").css({
-	"text-align": "center",
-	"left": "0px",
-	"right": "0px"
+    $("#nametext").animate({
+	left: ($(window).width() / 2) - ($("#nametext").width() / 2) - 40 + "px",
+    }, "fast", function() {
+	$("#name").css({
+	    "text-align": "center",
+	    "left": "0px",
+	    "right": "0px"
+	});
+	$("#nametext").css({left:"0px"});
+	ready=true;
+	scrollTitle();
     });
-    });
+
 }

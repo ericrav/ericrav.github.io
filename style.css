@@ -12,6 +12,9 @@ h1 {
     margin: 0px;
     pointer-events: none;
 }
+#nametext {
+    position: relative;
+}
 #nav {
     opacity:0;
     z-index: 500;
