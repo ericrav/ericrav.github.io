@@ -47,7 +47,7 @@ body{
 .selectedSound{
     width: 500px;
     height: 100%;
-    min-height: 700px;
+    min-height: 740px;
     background: rgba(30,30,30,0.6);
     -webkit-animation: bg-pulse 5s infinite;
     position: relative;
