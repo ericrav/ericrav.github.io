@@ -1,0 +1,110 @@
+<!DOCTYPE html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+	<a class="brand" href="/">Hipstring.me</a>
+	<ul class="nav">
+	  <li><a href="#">Home</a></li>
+	</ul>
+	<ul class="nav pull-right">
+	  <li><div class="input-append">
+      <input type="text" name="entry" placeholder="soundcloud.com/artist/track" id="entry" onclick="javascript:this.focus();this.select();">
+      <button class="btn" type="submit" value="Enter">Enter</button>
+    </div></li>
+	  <li><a id="login" href="#">Login/Register</a></li>
+	</ul>
+      </div>
+    </div>
+    <div class="main-container">
+    <div class="selectedSound-container">
+    <div class="selectedSound">
+    <div class="color-bg">
+      <div class="moving-circle" id="cir1"></div>
+      <div class="moving-circle" id="cir2"></div>
+      <div class="moving-circle" id="cir3"></div>
+      <div class="moving-circle" id="cir4"></div>
+    <div class="soundplayer">
+      <script src="http://connect.soundcloud.com/sdk.js"></script>
+      <script>
+	SC.initialize({
+	client_id: '17d3e97b53efec8eb31583b853282808'});
+      </script>
+      <div id="putTheWidgetHere"></div> 
+      <script type="text/JavaScript">
+	SC.oEmbed("http://www.soundcloud.com/ericrav/gripped", 
+	{color: "000066", show_artwork: false},  document.getElementById("putTheWidgetHere"));    
+      </script>
+    </div>
+    <div class="options-container">
+      <div class="voting">
+	<a class="selected" id="positive">What's Good</a>
+	<a id="negative">What Needs Work</a>
+      </div>
+      <ul id="elements" class="elements">
+	<li id="melody" class="attribute" data-toggle="tooltip" rel="tooltip" title='The main tune or most prominent sounds of the music. The "horizontal" aspect of the music that moves along with time.' >
+	  <p  class="attName">Melody</p>
+	</li>
+	<li id="harmony" class="attribute"
+	    data-toggle="tooltip" rel="tooltip" title='The simultaneous sounds that create chords or richer sound. The texture of the music, and how all the sounds interact "vertically."'>
+	  <p class="attName">Harmony</p>
+	</li>
+	<li id="rhythm" class="attribute" draggable="true"
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='The pattern or placement of the sounds in time. Also, the beat and pulse of the music.'>
+	  <p class="attName" onclick="showClickVote('rhythm')">Rhythm</p>
+	</li>
+	<li id="tempo" class="attribute"
+	    data-toggle="tooltip" rel="tooltip" title='The speed or pace of the music. It can be consistent or change throughout the music.'>
+	  <p class="attName">Tempo</p>
+	</li>
+	<li id="instrumentation" class="attribute"
+	    data-toggle="tooltip" rel="tooltip" title='The instruments or sounds used in the piece. How do they suit the nature of the instrument and how do the sounds fit in together? Is each part of the music played by the right sound/instrument?'>
+	  <p class="attName">Instrumentation</p>
+	</li>
+	<li id="tone" class="attribute"
+	    data-toggle="tooltip" rel="tooltip" title='The way the music and each part of it sounds to the ear and how distinguishable each sound is. Also known as timbre or tone color.'>
+	  <p class="attName">Tone</p>
+	</li>
+	<li id="production" class="attribute"
+	    data-toggle="tooltip" rel="tooltip" title='The quality of the recording. How the different frequencies and levels of sound interact. (The music may be well written but sound poor in this recording due to the production).'>
+	  <p class="attName">Production</p>
+	</li>
+	<li id="dynamics" class="attribute"
+	    data-toggle="tooltip" rel="tooltip" title='The loudness or softness of the music and how it changes.'>
+	  <p class="attName">Dynamics</p>
+	</li>
+	<li id="originality" class="attribute"
+	    data-toggle="tooltip" rel="tooltip" title='How creative the music is overall.'>
+	  <p class="attName">Originality</p>
+	<li id="form" class="attribute"
+	    data-toggle="tooltip" rel="tooltip" title="The overall structure of the music. How it's broken into parts, how it moves from part to part, and how all the other elements interact.">
+	  <p class="attName">Form</p>
+	</li>
+      </ul>
+      </div>
+    <div class="sharing">
+      <a class="facebook">
+	<img src="img/facebook.png">
+	Share
+      </a>
+      <a class="twitter">
+	<img src="img/twitter.png">
+	Share
+      </a>
+    </div>
+    </div>
+    </div>
+    </div>
+  </body>
+</html>

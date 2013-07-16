@@ -1,0 +1,223 @@
+<!DOCTYPE html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+	<a class="brand" href="/">Hipstring.me</a>
+	<ul class="nav">
+	  <li><a href="#">Home</a></li>
+	  <li><a href="#">Create</a></li>
+	  <li><a href="#">Explore</a></li>
+	</ul>
+	<ul class="nav pull-right">
+	  <li><a id="login" href="#">Login/Register</a></li>
+	</ul>
+      </div>
+    </div>
+    <div class="main-container">
+    <div class="soundplayer">
+      <script src="http://connect.soundcloud.com/sdk.js"></script>
+      <script>
+	SC.initialize({
+	client_id: '17d3e97b53efec8eb31583b853282808'});
+      </script>
+      <div id="putTheWidgetHere"></div> 
+      <script type="text/JavaScript">
+	SC.oEmbed("http://www.soundcloud.com/ericrav/gripped", 
+	{color: "000066"},  document.getElementById("putTheWidgetHere"));    
+      </script>
+    </div>
+    <div class="judgeTop">
+      <div id="negativeHeader" class="columnHeader span4">
+	<p>Needs Work</p>
+      </div>
+      <div class="judgeInstructions span4">
+	<p>Rate the music by dragging and 
+      dropping each individual attribute of the sound to the left or right.
+	</p>
+      </div>
+      <div id="positiveHeader" class="columnHeader span4">
+	<p>Great Job</p>
+      </div>
+    </div>
+    <div class="judgeArea">
+      <ul id="negative" class="assigned span4" ondrop="dropNegative(event)"
+ondragover="allowDrop(event)"></ul>
+      <ul id="unassigned" class="unassigned span4" ondrop="dropNeutral(event)"
+ondragover="allowDrop(event)">
+	<li id="melody" class="attribute" draggable="true" 
+	    ondragstart="drag(event)" ondragend="dragEnd(event)" data-toggle="tooltip" rel="tooltip" title='The main tune or most prominent sounds of the music. The "horizontal" aspect of the music that moves along with time.' >
+	  <p  class="attName" onclick="showClickVote('melody')">Melody</p>
+	  <p id="melodyStats" class="attStats" 
+	     onclick="showClickVote2('melody')">
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
+	    </p>
+	  <p class="clickVote" onclick="hideClickVote('melody')">
+	    <a onclick="movePositive('melody')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('melody')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('melody')"><i class="icon-thumbs-down"></i></a>
+	  </p>
+	</li>
+	<li id="harmony" class="attribute" draggable="true"
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='The simultaneous sounds that create chords or richer sound. The texture of the music, and how all the sounds interact "vertically."'>
+	  <p class="attName" onclick="showClickVote('harmony')">Harmony</p>
+	  <p id="harmonyStats" class="attStats"
+	     onclick="showClickVote2('harmony')">
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('harmony')">
+	    <a onclick="movePositive('harmony')"><i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('harmony')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('harmony')"><i class="icon-thumbs-down"></i></a>
+	  </p>
+	</li>
+	<li id="rhythm" class="attribute" draggable="true"
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='The pattern or placement of the sounds in time. Also, the beat and pulse of the music.'>
+	  <p class="attName" onclick="showClickVote('rhythm')">Rhythm</p>
+	  <p id="rhythmStats" class="attStats"
+	     onclick="showClickVote2('rhythm')">
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('rhythm')">
+	    <a onclick="movePositive('rhythm')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('rhythm')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('rhythm')"><i class="icon-thumbs-down"></i></a>
+	  </p>
+	</li>
+	<li id="tempo" class="attribute" draggable="true"
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='The speed or pace of the music. It can be consistent or change throughout the music.'>
+	  <p class="attName" onclick="showClickVote('tempo')">Tempo</p>
+	  <p id="tempoStats" class="attStats"
+	     onclick="showClickVote2('tempo')">
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('tempo')">
+	    <a onclick="movePositive('tempo')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('tempo')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('tempo')"><i class="icon-thumbs-down"></i></a>
+	  </p>
+	</li>
+	<li id="instrumentation" class="attribute" draggable="true"
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='The instruments or sounds used in the piece. How do they suit the nature of the instrument and how do the sounds fit in together? Is each part of the music played by the right sound/instrument?'>
+	  <p class="attName" onclick="showClickVote('instrumentation')">Instrumentation</p>
+	  <p id="instrumentationStats" class="attStats"
+	     onclick="showClickVote2('instrumentation')">
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('instrumentation')">
+	    <a onclick="movePositive('instrumentation')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('instrumentation')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('instrumentation')"><i class="icon-thumbs-down"></i></a>
+	  </p>
+	</li>
+	<li id="tone" class="attribute" draggable="true"
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='The way the music and each part of it sounds to the ear and how distinguishable each sound is. Also known as timbre or tone color.'>
+	  <p class="attName" onclick="showClickVote('tone')">Tone</p>
+	  <p id="toneStats" class="attStats"
+	     onclick="showClickVote2('tone')">
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('tone')">
+	    <a onclick="movePositive('tone')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('tone')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('tone')"><i class="icon-thumbs-down"></i></a>
+	  </p>
+	</li>
+	<li id="production" class="attribute" draggable="true"
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='The quality of the recording. How the different frequencies and levels of sound interact. (The music may be well written but sound poor in this recording due to the production).'>
+	  <p class="attName" onclick="showClickVote('production')">Production</p>
+	  <p id="productionStats" class="attStats"
+	     onclick="showClickVote2('production')">
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('production')">
+	    <a onclick="movePositive('production')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('production')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('production')"><i class="icon-thumbs-down"></i></a>
+	  </p>
+	</li>
+	<li id="dynamics" class="attribute" draggable="true"
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='The loudness or softness of the music and how it changes.'>
+	  <p class="attName" onclick="showClickVote('dynamics')">Dynamics</p>
+	  <p id="dynamicsStats" class="attStats"
+	     onclick="showClickVote2('dynamics')">
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('dynamics')">
+	    <a onclick="movePositive('dynamics')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('dynamics')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('dynamics')"><i class="icon-thumbs-down"></i></a>
+	  </p>
+	</li>
+	<li id="originality" class="attribute" draggable="true"
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title='How creative the music is overall.'>
+	  <p class="attName" onclick="showClickVote('originality')">Originality</p>
+	  <p id="originalityStats" class="attStats"
+	     onclick="showClickVote2('originality')">
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('originality')">
+	    <a onclick="movePositive('originality')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('originality')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('originality')"><i class="icon-thumbs-down"></i></a>
+	  </p>
+	</li>
+	<li id="form" class="attribute" draggable="true"
+	    ondragstart="drag(event)" ondragend="dragEnd(event)"
+	    data-toggle="tooltip" rel="tooltip" title="The overall structure of the music. How it's broken into parts, how it moves from part to part, and how all the other elements interact.">
+	  <p class="attName" onclick="showClickVote('form')">Form</p>
+	  <p id="formStats" class="attStats"
+	     onclick="showClickVote2('form')">
+	    <i class="icon-thumbs-up"></i> <span class="y">5</span>
+	    <i class="icon-thumbs-down"></i> <span class="n">4</span>
+	  </p>
+	  <p class="clickVote" onclick="hideClickVote('form')">
+	    <a onclick="movePositive('form')">
+	      <i class="icon-thumbs-up"></i></a>
+	    <a onclick="moveNeutral('form')"><i class="icon-remove"></i></a>
+	    <a onclick="moveNegative('form')"><i class="icon-thumbs-down"></i></a>
+	  </p>
+	</li>
+      </ul>
+      <ul id="positive" class="assigned span4" ondrop="dropPositive(event)"
+ondragover="allowDrop(event)"></ul>
+    </div>
+    <div class="buttonArea">
+    <button id="submitBtn" class="btn btn-primary" onclick="increaseVotes()">Lock In</btn></div></div>
+  </body>
+</html>
