@@ -1,4 +1,4 @@
-var cir1, cir2, cir3, cir4, voting = "positive";
+var cir1, cir2, cir3, cir4, voting = "positive", emOffset = 5000;
 $(document).ready(function () {
     $(".attribute").tooltip({delay: {show: 2000, hide:100}});
     cir1 = $("#cir1");
@@ -22,11 +22,17 @@ $(document).ready(function () {
 	    $(this).removeClass();
 	    $(this).addClass(voting);
 	}
+	countVotes();
     });
 });
 var moveCircle = function(obj) {
     var x = Math.random()*425+15;
     var y = Math.random()*600+100;
-    var t = Math.random()*3300+5000;
+    var t = Math.random()*3300+emOffset;
+    console.log(t);
     obj.animate({left:x,top:y},t, function(){moveCircle(obj);});
+}
+
+var countVotes = function() {
+    emOffset = 5000 - $(".elements li.positive").length*400 + $(".elements li.negative").length*400;
 }
