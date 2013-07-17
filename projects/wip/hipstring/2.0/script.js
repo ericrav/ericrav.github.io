@@ -1,6 +1,6 @@
 var cir1, cir2, cir3, cir4, voting = "positive", emOffset = 5000;
 $(document).ready(function () {
-    $(".attribute").tooltip({delay: {show: 2000, hide:100}});
+    $(".attribute").tooltip({delay: {show: 1200, hide:100}});
     cir1 = $("#cir1");
     cir2 = $("#cir2");
     cir3 = $("#cir3");
