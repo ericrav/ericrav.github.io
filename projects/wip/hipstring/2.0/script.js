@@ -1,14 +1,6 @@
 var cir1, cir2, cir3, cir4, voting = "positive", emOffset = 5000;
 $(document).ready(function () {
     $(".attribute").tooltip({delay: {show: 1200, hide:100}});
-    cir1 = $("#cir1");
-    cir2 = $("#cir2");
-    cir3 = $("#cir3");
-    cir4 = $("#cir4");
-    moveCircle(cir1);
-    moveCircle(cir2);
-    moveCircle(cir3);
-    moveCircle(cir4);
     
     $(".voting a").click(function() {
 	$(".voting a.selected").removeClass("selected");
@@ -37,5 +29,12 @@ var moveCircle = function(obj) {
 }
 
 var countVotes = function() {
-    emOffset = 5000 - $(".elements li.positive").length*400 + $(".elements li.negative").length*400;
+    var val = $('.elements li.positive').length - $('.elements li.negative').length;
+    if (val > 0) {
+	$('.color-bg').css({'background':'rgba(58,139,232,'+String(val*0.025)+')'});
+    } else if (val < 0) {
+	$('.color-bg').css({'background':'rgba(166,68,15,'+String(val*-0.025)+')'});
+    } else {
+	$('.color-bg').css({'background':'rgba(0,0,0,0)'});
+    }
 }
