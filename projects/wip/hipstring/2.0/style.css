@@ -20,7 +20,7 @@ body{
 }
 .selectedSound-container{
     max-width: 500px;
-    height: 100%;
+    max-height: 100%;
     min-height: 740px;
     background: url(img/bg.png);
 }
@@ -51,7 +51,7 @@ body{
 }
 .selectedSound{
     max-width: 500px;
-    height: 100%;
+    max-height: 100%;
     min-height: 740px;
     background: rgba(30,30,30,0.6);
     -webkit-animation: bg-pulse 5s infinite;
