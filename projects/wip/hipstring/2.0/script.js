@@ -1,7 +1,7 @@
 var cir1, cir2, cir3, cir4, voting = "positive", emOffset = 5000;
 $(document).ready(function () {
-    alert('test');
-    $(".attribute").tooltip({delay: {show: 1200, hide:100}});
+    $(".attribute").tooltip({delay: {show: 1200, hide:100}, trigger: "manual"});
+    $(".attribute .info").hover(function(){$(this).parent().tooltip('toggle');});
     
     $(".voting a").click(function() {
 	$(".voting a.selected").removeClass("selected");

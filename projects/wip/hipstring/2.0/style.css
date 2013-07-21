@@ -178,6 +178,18 @@ li {
     border-bottom: none;
 }
 }
+.elements .info{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    line-height: 0px;
+    opacity: 0.7;
+}
+.elements .info:hover{
+    opacity: 0.95;
+}
 .sharing {
     width: 100%;
     max-width: 100%;
