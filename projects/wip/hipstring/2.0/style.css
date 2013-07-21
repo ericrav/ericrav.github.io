@@ -84,12 +84,17 @@ li {
     list-style-type: none;
 }
 .options-container {
-    max-width: 95%;
+    max-width: 90%;
     margin: auto;
     text-align: center;
     display: inline-block;
     position: relative;
     z-index: 10;
+}
+@media (max-width: 480px){
+.options-container{
+    max-width: 100%;
+}
 }
 .voting {
     position: relative;
