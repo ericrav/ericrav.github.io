@@ -132,6 +132,7 @@ li {
 .elements li.positive{
     background: rgba(58,139,232,0.8);
 }
+@media (min-width: 480px){
 .elements li.positive:after{
     content: "You like this aspect";
     font-size: 11px;
@@ -147,9 +148,11 @@ li {
     border: 1px solid #ddd;
     border-bottom: none;
 }
+}
 .elements li.negative{
     background: rgba(166,68,15,0.8);
 }
+@media (min-width: 480px){
 .elements li.negative:after{
     content: "You don't like this aspect";
     font-size: 11px;
@@ -164,6 +167,7 @@ li {
     color: #ddd;
     border: 1px solid #ddd;
     border-bottom: none;
+}
 }
 .sharing {
     width: 100%;
