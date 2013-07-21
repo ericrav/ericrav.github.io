@@ -13,7 +13,6 @@ body{
     width: 100%;
     top: 41px;
     bottom: 0px;
-    padding-bottom: 40px;
 }
 .main-container, selectedSound-container, selectedSound, color-bg{
     min-height: 740px;
