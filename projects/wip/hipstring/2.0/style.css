@@ -13,6 +13,7 @@ body{
     width: 100%;
     top: 40px;
     bottom: 0px;
+    padding-bottom: 40px;
 }
 .main-container, selectedSound-container, selectedSound, color-bg{
     min-height: 740px;
@@ -88,7 +89,7 @@ li {
 .voting a {
     display: inline-block;
     width: 190px;
-    max-width: 42%;
+    max-width: 40%;
     height: 45px;
     line-height: 45px;
     background: rgba(210,210,210,0.9);
@@ -109,6 +110,7 @@ li {
 .elements li {
     display: inline-block;
     width: 170px;
+    max-width: 34%;
     height: 60px;
     line-height: 60px;
     background: rgba(0,0,0,0.85);
