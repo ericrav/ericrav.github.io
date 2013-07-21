@@ -116,7 +116,7 @@ li {
 .elements li {
     display: inline-block;
     width: 170px;
-    max-width: 34%;
+    max-width: 36%;
     height: 60px;
     line-height: 60px;
     background: rgba(0,0,0,0.85);
