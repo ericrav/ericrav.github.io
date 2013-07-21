@@ -187,6 +187,18 @@ li {
     line-height: 0px;
     opacity: 0.7;
 }
+@media (max-width: 640px) {
+.elements .info:after{
+    content: "";
+    position: absolute;
+    background: rgba(0,0,0,0);
+    width: 40px;
+    height: 35px;
+    display: block;
+    top: -10px;
+    left: -10px;
+}
+}
 .elements .info:hover{
     opacity: 0.95;
 }
