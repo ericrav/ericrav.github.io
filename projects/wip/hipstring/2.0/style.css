@@ -11,9 +11,6 @@ body{
 .navbar .brand{
     margin: 0px;
 }
-.navbar input {
-    height: 30px;
-}
 .navbar .input-append {
     margin-top: 5px;
     margin-bottom: 0px;
