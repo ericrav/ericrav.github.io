@@ -34,6 +34,9 @@ body{
 .navbar .brand{
     margin: 0px;
 }
+.navbar a{
+    font-size: 18px;
+}
 .navbar .input-append {
     margin-top: 5px;
     margin-bottom: 0px;
