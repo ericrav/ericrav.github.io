@@ -30,6 +30,7 @@ body{
 }
 .navbar .navbar-inner{
     padding-right: 0px;
+    background: #261D1D;
 }
 .navbar .brand{
     margin: 0px;
@@ -135,7 +136,7 @@ li {
     height: 60px;
     line-height: 60px;
     letter-spacing: 1px;
-    background: rgba(0,0,0,0.85);
+    background: rgba(38,29,29,0.85);
     color: white;
     margin: 10px;
     cursor: pointer;
@@ -144,7 +145,7 @@ li {
     font-size: 20px;
 }
 .elements li:hover{
-    background: rgba(0,0,0,0.6);
+    background: rgba(38,29,29,0.6);
 }
 
 .elements li.positive{
