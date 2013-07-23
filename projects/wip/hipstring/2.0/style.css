@@ -134,6 +134,7 @@ li {
     max-width: 36%;
     height: 60px;
     line-height: 60px;
+    letter-spacing: 1px;
     background: rgba(0,0,0,0.85);
     color: white;
     margin: 10px;
