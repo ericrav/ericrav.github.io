@@ -280,6 +280,15 @@ li {
 }
 }
 
+@media (min-width: 1100px) {
+.selectedSound-container, .selectedSound, .color-bg, .sharing{
+    max-width: 640px;
+}
+.more-tracks{
+    margin-left: 640px;
+}
+}
+
 @media (max-width: 979px) {
 .selectedSound-container, .sharing{
     position: absolute;
