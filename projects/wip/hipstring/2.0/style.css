@@ -251,15 +251,16 @@ li {
 }
 .more-tracks{
     background: black;
-    height: 100%;
+    min-height: 100%;
     margin-left: 500px;
+    display: inline-block;
 }
 .more-tracks h2{
     margin: 0px;
 }
 .more-tracks .tracks-container .track{
     display: inline-block;
-    max-width: 180px;
+    max-width: 130px;
     min-width: 25%;
     padding: 20px;
     margin: auto;
