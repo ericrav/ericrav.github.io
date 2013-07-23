@@ -7,6 +7,7 @@ body{
     height: 100%;
     padding: 0px;
     text-align: center;
+    position: relative;
 }
 .main-container{
     position: absolute;
@@ -14,22 +15,21 @@ body{
     top: 41px;
     bottom: 0px;
 }
-.main-container, selectedSound-container, selectedSound, color-bg{
+.selectedSound-container, .selectedSound, .color-bg{
     min-height: 740px;
     max-width: 500px;
 }
-@media (max-width: 640px) {
-.main-container, selectedSound-container, selectedSound, color-bg{
-    max-width: 640px;
+.sharing{
+    max-width: 500px;
 }
-}
+
 .navbar{
     max-width: 100%;
     margin: 0px;
     font-family: 'Sue Ellen Francisco', cursive;
 }
 .navbar .navbar-inner{
-    padding-right: 0px;
+    padding: 0px;
     background: #261D1D;
 }
 .navbar .brand{
@@ -44,7 +44,9 @@ body{
 }
 .selectedSound-container{
     height: 100%;
+    float: left;
     background: url(img/bg.png);
+    position: fixed;
 }
 .color-bg{
     width: 100%;
@@ -214,10 +216,10 @@ li {
 }
 .sharing {
     width: 100%;
-    max-width: 100%;
+    max-width: 500px;
     margin: auto;
     text-align: center;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
 }
 .sharing a {
@@ -246,4 +248,38 @@ li {
 .sharing .twitter img {
     width: 32px;
     height: 32px;
+}
+.more-tracks{
+    background: black;
+    height: 100%;
+    margin-left: 500px;
+}
+.more-tracks h2{
+    margin: 0px;
+}
+.more-tracks .tracks-container .track{
+    display: inline-block;
+    max-width: 180px;
+    min-width: 25%;
+    padding: 20px;
+    margin: auto;
+}
+}
+.more-tracks .tracks-container .track img {
+    height: auto;
+    max-width: 100%;
+}
+
+@media (max-width: 640px) {
+.main-container, .selectedSound-container, .selectedSound, .color-bg, .sharing{
+    max-width: 640px;
+}
+.more-tracks{
+    display: none;
+}
+}
+
+@media (max-width: 979px) {
+.selectedSound-container, .sharing{
+    position: absolute;
 }
