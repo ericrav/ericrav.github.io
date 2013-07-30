@@ -10,8 +10,8 @@ $(document).ready(function () {
 	$(this).addClass("selected");
 	voting = $(this).attr("id");
 	var $elements = $(".elements li."+voting);
-	$elements.removeClass(voting);
-	setTimeout(function(){$elements.addClass(voting);},115);
+	$elements.css("background","#333");
+	setTimeout(function(){$elements.css("background","");},115);
     });
     $(".elements li p").click(function() {
 	$el = $(this).parent();
