@@ -283,6 +283,12 @@ li {
 .more-tracks{
     display: none;
 }
+.elements li {
+    font-size: 15px;
+}
+.voting a {
+    font-size: 16px;
+}
 }
 
 @media (min-width: 1100px) {
