@@ -37,7 +37,7 @@ var countVotes = function() {
     if (val > 0) {
 	$('.color-bg').css({'background':'rgba(58,139,232,'+String(val*0.025)+')'});
     } else if (val < 0) {
-	$('.color-bg').css({'background':'rgba(166,68,15,'+String(val*-0.025)+')'});
+	$('.color-bg').css({'background':'rgba(217,87,76,'+String(val*-0.025)+')'});
     } else {
 	$('.color-bg').css({'background':'rgba(0,0,0,0)'});
     }
