@@ -159,9 +159,9 @@ li {
 @media (min-width: 480px){
 .elements li.positive:after{
     content: "You like this aspect";
-    font-size: 10px;
-    height: 12px;
-    line-height: 12px;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
     position: absolute;
     bottom: 0px;
     left: 50%;
@@ -180,9 +180,9 @@ li {
 @media (min-width: 480px){
 .elements li.negative:after{
     content: "You don't like this aspect";
-    font-size: 10px;
-    height: 12px;
-    line-height: 12px;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
     position: absolute;
     bottom: 0px;
     left: 50%;
