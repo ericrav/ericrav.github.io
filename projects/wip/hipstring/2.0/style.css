@@ -45,7 +45,7 @@ body{
 .selectedSound-container{
     height: 100%;
     float: left;
-    background: url(img/bg.png);
+    background: url(img/sax_blur.jpg) no-repeat;
     position: fixed;
 }
 .color-bg{
@@ -139,8 +139,8 @@ li {
     height: 60px;
     line-height: 60px;
     letter-spacing: 1px;
-    background: rgba(38,29,29,0.85);
-    color: white;
+    background: rgba(255,220,99,0.85);
+    color: #333;
     margin: 10px;
     cursor: pointer;
     position: relative;
@@ -149,10 +149,11 @@ li {
     font-size: 17px;
 }
 .elements li:hover{
-    background: rgba(38,29,29,0.6);
+    background: rgba(255,220,99,0.5);
 }
 
 .elements li.positive{
+    color: white;
     background: rgba(58,139,232,0.8);
 }
 @media (min-width: 480px){
@@ -173,6 +174,7 @@ li {
 }
 }
 .elements li.negative{
+    color: white;
     background: rgba(166,68,15,0.8);
 }
 @media (min-width: 480px){
