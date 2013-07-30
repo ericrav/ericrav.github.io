@@ -154,7 +154,7 @@ li {
 
 .elements li.positive{
     color: white;
-    background: rgba(82,181,53,0.8);
+    background: rgba(89,207,77,0.8);
 }
 @media (min-width: 480px){
 .elements li.positive:after{
