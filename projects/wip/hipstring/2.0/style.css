@@ -45,7 +45,7 @@ body{
 .selectedSound-container{
     height: 100%;
     float: left;
-    background: url(img/sax_blur.jpg) no-repeat;
+    background: url(img/bg.png);
     position: fixed;
 }
 .color-bg{
