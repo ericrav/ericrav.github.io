@@ -295,6 +295,7 @@ li {
 }
 .track .artist{
     color: #aaa;
+    font-size: 12px;
 }
 
 @media (max-width: 640px) {
