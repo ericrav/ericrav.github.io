@@ -274,11 +274,21 @@ li {
     min-width: 25%;
     padding: 20px;
     margin: auto;
-}
+    text-align: left;
 }
 .more-tracks .tracks-container .track img {
     height: auto;
     max-width: 100%;
+}
+.more-tracks .track span{
+    display: inline-block;
+    text-align: left;
+}
+.track .title{
+    color: white;
+}
+.track .artist{
+    color: #aaa;
 }
 
 @media (max-width: 640px) {
