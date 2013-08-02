@@ -46,7 +46,7 @@ body{
     height: 100%;
     float: left;
     background: url(img/bg.png);
-    position: fixed;
+    position: absolute;
 }
 .color-bg{
     width: 100%;
