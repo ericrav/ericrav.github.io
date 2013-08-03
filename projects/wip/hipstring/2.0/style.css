@@ -260,7 +260,7 @@ li {
     height: 32px;
 }
 .more-tracks{
-    background: black;
+    background: rgb(117,205,217);
     min-height: 740px;
     height: 100%;
     margin-left: 500px;
@@ -296,16 +296,19 @@ li {
     max-width: 100%;
 }
 .more-tracks .track span{
-    display: inline-block;
+    display: block;
     text-align: left;
+    overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
 }
 .track .title{
-    color: white;
+    color: #eee;
     margin-top: 8px;
 }
 .track .artist{
-    color: #aaa;
+    color: #555;
     font-size: 12px;
 }
 .more-tracks .unheard:after{
