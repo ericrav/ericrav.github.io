@@ -292,8 +292,13 @@ li {
     position: relative;
 }
 .more-tracks .tracks-container .track img {
+    cursor: pointer;
     height: auto;
     max-width: 100%;
+    box-shadow: 0 0 10px 2px #261D1D;
+}
+.more-tracks .tracks-container .track img:hover{
+    box-shadow: 0 0 2px 3px #261D1D;
 }
 .more-tracks .track span{
     display: block;
