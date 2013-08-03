@@ -5,29 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap-responsive.css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet">
+<!--     <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-responsive.css"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-    <script src="bootstrap.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+  <!--   // <script src="bootstrap.js"></script> -->
     <script src="script.js"></script>
   </head>
   <body>
+  	<div class="container">
     <div class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
-	<a class="brand" href="/">Hipstring.me</a>
-	<ul class="nav">
-	  <li class="hidden-phone"><a href="#">Home</a></li>
+  <!--     <div class="navbar-inner"> -->
+	<a class="navbar-brand" href="/">Hipstring.me</a>
+	<ul class="nav navbar-nav">
+	  <li class="hidden-sm"><a href="#">Home</a></li>
 	</ul>
-	<ul class="nav pull-right">
-	  <li class="hidden-phone"><div class="input-append">
-      <input type="text" name="entry" placeholder="soundcloud.com/artist/track" id="entry" onclick="javascript:this.focus();this.select();">
-      <button class="btn" type="submit" value="Enter">Enter</button>
+	<ul class="nav navbar-nav pull-right">
+	  <li class="hidden-sm"><div class="input-group navbar-form" style="width:300px;">
+      <input class="form-control" type="text" name="entry" placeholder="soundcloud.com/artist/track" id="entry" onclick="javascript:this.focus();this.select();">
+      <span class="input-group-btn"><button class="btn" type="submit" value="Enter">Enter</button></span>
     </div></li>
-	  <li><a id="login" href="#">Login/Register</a></li>
+	  <li><button type="button" class="btn btn-default navbar-btn" id="login" href="#">Login/Register</button></li>
 	</ul>
-      </div>
+    <!--   </div> -->
     </div>
     <div class="main-container">
     <div class="selectedSound-container">
@@ -66,7 +69,7 @@
       <ul id="elements" class="elements">
 	<li id="melody" class="attribute" data-toggle="tooltip" rel="tooltip" title='The main tune or most prominent sounds of the music. The "horizontal" aspect of the music that moves along with time.' >
 	  <p  class="attName">Melody</p>
-	  <div class="info"><i class="icon-question-sign"></i></div>
+	  <div class="info"><i class="glyphicon glyphicon-question-sign"></i></div>
 	</li>
 	<li id="harmony" class="attribute"
 	    data-toggle="tooltip" rel="tooltip" title='The simultaneous sounds that create chords or richer sound. The texture of the music, and how all the sounds interact "vertically."'>
@@ -197,7 +200,7 @@
 			<img src="https://i2.sndcdn.com/artworks-000053543243-qfsanr-t500x500.jpg?5ffe3cd">
 		</div>
 	  <span class="title">A Cool Track</span>
-	  <span class="artist">A Cool Singer With a Really Long Name</span>
+	  <span class="artist" title="A Cool Singer With a Really Long Name">A Cool Singer With a Really Long Name</span>
 	</div>
 	<div class="track ur3">
 		<div class="cover-container">
@@ -207,6 +210,7 @@
 	  <span class="artist">A Cool Singer</span>
 	</div>
       </div>
+    </div>
     </div>
     </div>
   </body>
