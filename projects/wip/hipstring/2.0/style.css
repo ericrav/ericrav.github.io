@@ -271,8 +271,12 @@ li {
     margin: 5px auto 0px;
     padding: 0px 20px;
     font-size: 18px;
-    line-height: 20px;
+    line-height: 18px;
     text-align: center;
+}
+.more-tracks h2 i{
+    margin-top: 5px;
+    cursor: pointer;
 }
 .more-tracks .tracks-container .track{
     display: inline-block;

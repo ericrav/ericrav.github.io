@@ -1,5 +1,6 @@
 var cir1, cir2, cir3, cir4, voting = "positive", emOffset = 5000;
 $(document).ready(function () {
+	$(".more-tracks h2 i").tooltip({placement: "bottom"});
     $(".attribute").tooltip({delay: {show: 1200, hide:100}, trigger: "manual"});
     $(".attribute .info").hover(function(){$(this).parent().tooltip('show');},
 				function(){$(this).parent().tooltip('hide');});
