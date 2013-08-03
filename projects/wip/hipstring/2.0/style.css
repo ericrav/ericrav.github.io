@@ -157,7 +157,7 @@ li {
     background: rgba(58,139,232,0.8);
 }
 @media (min-width: 480px){
-.elements li.positive:after{
+.elements li.positive p:after{
     content: "You like this aspect";
     font-size: 14px;
     height: 14px;
@@ -178,7 +178,7 @@ li {
     background: rgba(217,87,76,0.8);
 }
 @media (min-width: 480px){
-.elements li.negative:after{
+.elements li.negative p:after{
     content: "You don't like this aspect";
     font-size: 14px;
     height: 14px;
@@ -281,6 +281,11 @@ li {
     padding: 20px;
     margin: auto;
     text-align: left;
+    position: relative;
+}
+.more-tracks .track .cover-container{
+    display: inline-block;
+    position: relative;
 }
 .more-tracks .tracks-container .track img {
     height: auto;
@@ -289,13 +294,47 @@ li {
 .more-tracks .track span{
     display: inline-block;
     text-align: left;
+    text-overflow: ellipsis;
 }
 .track .title{
     color: white;
+    margin-top: 8px;
 }
 .track .artist{
     color: #aaa;
     font-size: 12px;
+}
+.more-tracks .unheard:after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+    display: block;
+    margin: 20px;
+    padding: 0;
+    border: 15px solid transparent;
+    border-left-color: rgba(58,139,232,0.8);
+    border-top-color: rgba(58,139,232,0.8);
+}
+.more-tracks .unheard .cover-container:after{
+    content: "NEW";
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    bottom: -8px;
+    right: -25px;
+    left: 50%;
+    display: inline;
+    /*height: 15px;*/
+    background: rgba(58,139,232,0.8);
+    border-radius: 12px;
+    width: 50px;
+    /*margin: 0 50% 0 25px;*/
+    /*margin-right: -20px;*/
+    /*margin-left: -50%;*/
+    text-align: center;
 }
 
 @media (max-width: 640px) {
