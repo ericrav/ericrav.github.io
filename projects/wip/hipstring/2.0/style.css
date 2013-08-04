@@ -144,9 +144,9 @@ li {
     margin: 10px;
     cursor: pointer;
     position: relative;
-    font-family: 'Wire One';
+    font-family: 'Oswald';
 
-    font-size: 24px;
+    font-size: 18px;
 }
 .elements li:hover{
     background: rgba(255,220,99,0.5);
@@ -380,9 +380,9 @@ li {
 .more-tracks{
     display: none;
 }
-.elements li {
+/*.elements li {
     font-size: 24px;
-}
+}*/
 .voting a {
     font-size: 14px;
 }
