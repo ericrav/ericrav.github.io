@@ -159,7 +159,8 @@ li {
 @media (min-width: 480px){
 .elements li.positive p:after{
     content: "You like this aspect";
-    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
     height: 14px;
     line-height: 14px;
     position: absolute;
@@ -180,7 +181,8 @@ li {
 @media (min-width: 480px){
 .elements li.negative p:after{
     content: "You don't like this aspect";
-    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
     height: 14px;
     line-height: 14px;
     position: absolute;
