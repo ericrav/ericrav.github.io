@@ -382,9 +382,9 @@ li {
 .more-tracks{
     display: none;
 }
-/*.elements li {
-    font-size: 24px;
-}*/
+.elements li {
+    font-size: 16px;
+}
 .voting a {
     font-size: 14px;
 }
