@@ -3,7 +3,7 @@ $(document).ready(function () {
 	$(".more-tracks h2 i").tooltip({placement: "bottom"});
     $(".attribute").tooltip({delay: {show: 1200, hide:100}, trigger: "manual"});
     $(".attribute .info").hover(function(){$(this).parent().tooltip('show');},
-				function(){$(this).parent().tooltip('hide');});
+								function(){$(this).parent().tooltip('hide');});
     $(".attribute .info").click(function(){$(this).parent().tooltip('toggle');});
     
     $(".voting a").click(function() {
