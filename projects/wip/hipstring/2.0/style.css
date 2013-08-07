@@ -426,7 +426,12 @@ li {
     max-width: 640px;
 }
 .more-tracks{
-    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-left: 0;
+    overflow: hidden;
+    height: auto;
 }
 .elements li {
     font-size: 16px;

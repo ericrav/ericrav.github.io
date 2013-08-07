@@ -1,5 +1,6 @@
 var cir1, cir2, cir3, cir4, voting = "positive", emOffset = 5000;
 $(document).ready(function () {
+	$(".more-tracks").css("top", $(".selectedSound").height() + "px");
 	var votingStats = [[2,3],[0,4],[1,1],[2,1],[9,5],[12,3],[4,8],[0,0],[4,5],[2,3]];
 	var $elements = $(".attribute");
 	for (var i = 0; i < $elements.length; i++) {
