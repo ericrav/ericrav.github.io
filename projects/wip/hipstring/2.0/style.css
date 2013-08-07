@@ -341,7 +341,7 @@ li {
     position: relative;
 }
 .more-tracks .track .cover-container{
-    display: inline-block;
+    display: block;
     position: relative;
 }
 .more-tracks .tracks-container .track img {
