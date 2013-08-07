@@ -17,8 +17,10 @@ body{
     height: 100%;
     overflow: hidden;
 }
-.selectedSound-container, .selectedSound, .color-bg{
+.selectedSound-container, .selectedSound, .color-bg, .more-tracks{
     min-height: 740px;
+}
+.selectedSound-container, .selectedSound, .color-bg{
     max-width: 500px;
 }
 .sharing{
@@ -309,7 +311,6 @@ li {
 }
 .more-tracks{
     background: rgb(117,205,217);
-    min-height: 740px;
     height: 100%;
     margin-left: 500px;
     display: block;
@@ -427,6 +428,9 @@ li {
 @media (max-width: 640px) {
 .main-container, .selectedSound-container, .selectedSound, .color-bg, .sharing{
     max-width: 640px;
+}
+.selectedSound-container, .selectedSound, .color-bg, .more-tracks{
+    min-height: 750px;
 }
 .more-tracks{
     position: absolute;
