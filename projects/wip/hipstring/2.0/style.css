@@ -430,7 +430,7 @@ li {
     max-width: 640px;
 }
 .selectedSound-container, .selectedSound, .color-bg, .more-tracks{
-    min-height: 750px;
+    min-height: 770px;
 }
 .more-tracks{
     position: absolute;
