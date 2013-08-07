@@ -41,6 +41,9 @@ $(document).ready(function () {
 	countVotes();
     });
 });
+$(window).resize(function () {
+	$(".more-tracks").css("top", $(".selectedSound").height() + "px");
+});
 var showVotingStats = function(e, option) {
 	console.log(e);
     $el    = $(e.currentTarget).parent();
