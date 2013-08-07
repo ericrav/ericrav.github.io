@@ -249,6 +249,9 @@ li {
     display: inline-block;
 }
 @media (max-width: 640px) {
+.elements .voting-stats > div{
+    margin-left: 5px;
+}
 .elements .info:after, .elements .stats-toggle:after{
     content: "";
     position: absolute;
