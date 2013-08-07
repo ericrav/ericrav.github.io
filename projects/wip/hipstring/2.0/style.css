@@ -19,7 +19,7 @@ body{
     bottom: 0px;
 }
 .selectedSound-container, .selectedSound, .color-bg{
-    min-height: 780px;
+    min-height: 740px;
     max-width: 500px;
 }
 .sharing{
@@ -314,7 +314,6 @@ li {
     min-height: 740px;
     height: 100%;
     margin-left: 500px;
-    padding-bottom: 40px;
     display: inline-block;
     overflow: auto;
 }
@@ -328,6 +327,9 @@ li {
 .more-tracks h2 i{
     margin-top: 5px;
     cursor: pointer;
+}
+.more-tracks .tracks-container{
+    padding-bottom: 40px;
 }
 .more-tracks .tracks-container .track{
     display: inline-block;
