@@ -19,7 +19,7 @@ body{
     bottom: 0px;
 }
 .selectedSound-container, .selectedSound, .color-bg{
-    min-height: 740px;
+    min-height: 780px;
     max-width: 500px;
 }
 .sharing{
@@ -314,6 +314,7 @@ li {
     min-height: 740px;
     height: 100%;
     margin-left: 500px;
+    padding-bottom: 40px;
     display: inline-block;
     overflow: auto;
 }
