@@ -9,6 +9,9 @@ body{
     text-align: center;
     position: relative;
 }
+[class^="icon-"], [class*=" icon-"]{
+    font-size: 13px;
+}
 .main-container{
     position: absolute;
     width: 100%;
