@@ -13,10 +13,9 @@ body{
     font-size: 13px;
 }
 .main-container{
-    position: absolute;
     width: 100%;
-    top: 41px;
-    bottom: 0px;
+    height: 100%;
+    overflow: hidden;
 }
 .selectedSound-container, .selectedSound, .color-bg{
     min-height: 740px;
@@ -49,7 +48,6 @@ body{
     height: 100%;
     float: left;
     background: url(img/bg.png);
-    position: absolute;
 }
 .color-bg{
     width: 100%;
@@ -314,7 +312,7 @@ li {
     min-height: 740px;
     height: 100%;
     margin-left: 500px;
-    display: inline-block;
+    display: block;
     overflow: auto;
 }
 .more-tracks h2{
@@ -458,4 +456,10 @@ li {
 @media (max-width: 979px) {
 .selectedSound-container{
     position: absolute;
+}
+}
+@media (min-width: 979px) {
+body{
+    padding-top: 40px;
+}
 }
