@@ -78,7 +78,6 @@ body{
     background: rgba(30,30,30,0.6);
     -webkit-animation: bg-pulse 5s infinite;
     position: relative;
-    overflow: auto;
 }
 .soundplayer{
     width: 90%;
