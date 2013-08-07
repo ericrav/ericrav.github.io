@@ -1,10 +1,25 @@
 var cir1, cir2, cir3, cir4, voting = "positive", emOffset = 5000;
 $(document).ready(function () {
+	var votingStats = [[2,3],[0,4],[1,1],[2,1],[9,5],[12,3],[4,8],[0,0],[4,5],[2,3]];
+	var $elements = $(".attribute");
+	for (var i = 0; i < $elements.length; i++) {
+		var p     = votingStats[i][0]; 
+		var n     = votingStats[i][1]; 
+		var total = (p + n) == 0 ? 1 : p + n;
+		var $el   = $($elements[i]);
+		$el.find(".voting-stats .positive .bar").css("width", (((p/total)*65)+5) + "%");
+		$el.find(".voting-stats .negative .bar").css("width", (((n/total)*65)+5) + "%");
+		$el.find(".voting-stats .positive span").text(p);
+		$el.find(".voting-stats .negative span").text(n);
+	}
 	$(".more-tracks h2 i").tooltip({placement: "bottom"});
     $(".attribute").tooltip({delay: {show: 1200, hide:100}, trigger: "manual"});
     $(".attribute .info").hover(function(){$(this).parent().tooltip('show');},
 								function(){$(this).parent().tooltip('hide');});
     $(".attribute .info").click(function(){$(this).parent().tooltip('toggle');});
+    $(".attribute .stats-toggle").hover(function(e){showVotingStats(e, 'show');},
+										function(e){showVotingStats(e, 'hide');});
+    $(".attribute .stats-toggle").click(function(e){showVotingStats(e, 'toggle');});
     
     $(".voting a").click(function() {
 	$(".voting a.selected").removeClass("selected");
@@ -20,17 +35,29 @@ $(document).ready(function () {
 	    $el.removeClass();
 	} else {
 	    $el.removeClass();
-	    $el.addClass(voting);
+	    $el.addClass(voting + " rated");
 	}
 	countVotes();
     });
 });
-var moveCircle = function(obj) {
-    var x = Math.random()*425+15;
-    var y = Math.random()*600+100;
-    var t = Math.random()*3300+emOffset;
-    console.log(t);
-    obj.animate({left:x,top:y},t, function(){moveCircle(obj);});
+var showVotingStats = function(e, option) {
+	console.log(e);
+    $el    = $(e.currentTarget).parent();
+    $p     = $el.find("p.attName");
+    $stats = $el.find("div.voting-stats");
+    if (option=="show") {
+    	$p.animate({'opacity':0});
+    	$stats.fadeIn();
+    } else if (option=="hide") {
+    	$p.animate({'opacity':1});
+    	$stats.fadeOut();
+    } else {
+    	if ($p.css("opacity") == 1) {
+    		showVotingStats(e, "show");
+    	} else {
+    		showVotingStats(e, "hide");
+    	}
+    }
 }
 
 var countVotes = function() {
