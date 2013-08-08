@@ -1,5 +1,22 @@
 var cir1, cir2, cir3, cir4, voting = "positive", emOffset = 5000;
 $(document).ready(function () {
+	$("a.twitter").attr("href", "https://twitter.com/share?url=" + encodeURIComponent(document.URL) + "&text=" + encodeURIComponent("Check out this track!"));
+	$("a.twitter").click(function(event) {
+    var width  = 575,
+        height = 400,
+        left   = ($(window).width()  - width)  / 2,
+        top    = ($(window).height() - height) / 2,
+        url    = this.href,
+        opts   = 'status=1' +
+                 ',width='  + width  +
+                 ',height=' + height +
+                 ',top='    + top    +
+                 ',left='   + left;
+
+    window.open(url, 'twitte', opts);
+
+    return false;
+  });
 	$(".more-tracks").css("top", $(".selectedSound").height() + "px");
 	var votingStats = [[2,3],[0,4],[1,1],[2,1],[9,5],[12,3],[4,8],[0,0],[4,5],[2,3]];
 	var $elements = $(".attribute");
