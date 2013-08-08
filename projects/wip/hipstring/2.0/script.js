@@ -1,10 +1,9 @@
-var cir1, cir2, cir3, cir4, voting = "positive", emOffset = 5000;
+var voting = "positive";
 $(document).ready(function () {
 	$("a.twitter").attr("href", "https://twitter.com/share?url=" + encodeURIComponent(document.URL) + "&text=" + encodeURIComponent("Check out this track!"));
-	$("a.twitter").click(function(event) {
-    var width  = 575,
-        height = 400,
-        left   = ($(window).width()  - width)  / 2,
+	$("a.facebook").attr("href", "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(document.URL));
+	$(".sharing a").click(function(event) {
+    var width  = 575, height = 400, left   = ($(window).width()  - width)  / 2,
         top    = ($(window).height() - height) / 2,
         url    = this.href,
         opts   = 'status=1' +
@@ -13,7 +12,7 @@ $(document).ready(function () {
                  ',top='    + top    +
                  ',left='   + left;
 
-    window.open(url, 'twitte', opts);
+    window.open(url, "_blank", opts);
 
     return false;
   });
@@ -62,10 +61,9 @@ $(window).resize(function () {
 	$(".more-tracks").css("top", $(".selectedSound").height() + "px");
 });
 var showVotingStats = function(e, option) {
-	console.log(e);
-    $el    = $(e.currentTarget).parent();
-    $p     = $el.find("p.attName");
-    $stats = $el.find("div.voting-stats");
+    var $el = $(e.currentTarget).parent(),
+    $p      = $el.find("p.attName"),
+    $stats  = $el.find("div.voting-stats");
     if (option=="show") {
     	$p.animate({'opacity':0});
     	$stats.fadeIn();
