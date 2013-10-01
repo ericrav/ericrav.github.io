@@ -166,7 +166,7 @@ aside:hover {
 }
 .more-tracks:hover .track span{
     display: block;
-    text-align: left;
+    text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
