@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hipstring</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="style.css" rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <ul class="nav navbar-nav">
+        <li><a class="navbar-brand" href="#">Hipstring.me</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        <li><button type="button" class="btn btn-default navbar-btn">Sign in</button></li>
+      </ul>
+      <div class="col-sm-4 col-md-4 pull-right hidden-xs">
+        <form class="navbar-form" role="search">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="soundcloud.com/artist/track" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="button">Add</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+      <div class="soundplayer">
+        <script src="http://connect.soundcloud.com/sdk.js"></script>
+        <script>
+          SC.initialize({
+          client_id: '17d3e97b53efec8eb31583b853282808'});
+        </script>
+        <div id="putTheWidgetHere"></div> 
+        <script type="text/JavaScript">
+          SC.oEmbed("http://www.soundcloud.com/ericrav/gripped", 
+          {color: "000066", show_artwork: true},  document.getElementById("putTheWidgetHere"));    
+        </script>
+      </div>
+
+      <ul class="attributes">
+        <li>
+          <div class="attribute">
+            <h2>Melody</h2>
+            <div class="voting">
+              <div class="vote negative">
+                <span class="glyphicon glyphicon-thumbs-down"></span>
+                <span class="count"></span>
+              </div>
+              <div class="vote positive">
+                <span class="glyphicon glyphicon-thumbs-up"></span>
+                <span class="count"></span>
+              </div>
+            </div>
+            <div class="comment"></div>
+            <div class="stats"></div>
+          </div>
+        </li>
+        <li>
+          <div class="attribute">
+            <h2>Harmony</h2>
+            <div class="voting">
+              <div class="vote negative">
+                <span class="glyphicon glyphicon-thumbs-down"></span>
+                <span class="count"></span>
+              </div>
+              <div class="vote positive">
+                <span class="glyphicon glyphicon-thumbs-up"></span>
+                <span class="count"></span>
+              </div>
+            </div>
+            <div class="comment"></div>
+            <div class="stats"></div>
+          </div>
+        </li>
+        <li>
+          <div class="attribute">
+            <h2>Rhythm</h2>
+            <div class="voting">
+              <div class="vote negative">
+                <span class="glyphicon glyphicon-thumbs-down"></span>
+                <span class="count"></span>
+              </div>
+              <div class="vote positive">
+                <span class="glyphicon glyphicon-thumbs-up"></span>
+                <span class="count"></span>
+              </div>
+            </div>
+            <div class="comment"></div>
+            <div class="stats"></div>
+          </div>
+        </li>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,97 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+body {
+	padding-top: 50px;
+}
+ul {
+	list-style-type: none;
+}
+
+.navbar-default {
+	background-color: #261D1D;
+}
+.navbar-default .navbar-nav>li>a {
+	color: #999;
+}
+.navbar-default .navbar-nav>li>a:hover {
+	color: #fff;
+}
+.navbar-nav {
+	float: left;
+	margin: 0;
+}
+.navbar-nav>li>a {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.pull-right {
+	float: right;
+}
+nav ul.nav.pull-right {
+	margin-right: 10px;
+}
+.btn-default, .btn-default:hover, .form-control{
+	border-color: #3D697F;
+
+}
+.input-group-btn > button {
+	border-left: none;
+	background-color: #6398E8;
+}
+.input-group-btn > button:hover, .btn-default:hover{
+	background-color: #6398E8;
+}
+
+.attributes {
+	display: inline-block;
+}
+.attribute {
+	margin-bottom: 6px;
+}
+.attribute > h2 {
+	position: relative;
+	line-height: 35px;
+	font-size: 26px;
+	margin: 0 0 5px;
+	cursor: pointer;
+	color: #261D1D;
+	border-bottom: 1px solid #261D1D;
+	padding-left: 3px;
+}
+.attribute > h2:before {
+	content: " ";
+	position: absolute;
+	left: -9px;
+	top: 13px;
+	border: 5px solid transparent;
+    border-left-color: #777;
+}
+.attribute > h2:hover:before {
+	border-left-color: #6398E8;
+}
+.attribute > h2:hover {
+	color: #6398E8;
+}
+.attribute .voting .vote {
+	cursor: pointer;
+	display: inline-block;
+	margin: 0px 4px;
+	min-width: 30px;
+	height: 30px;
+	background-color: #e3e3e3;
+}
+.attribute .voting .vote .glyphicon {
+	text-align: center;
+	line-height: 30px;
+	font-size: 18px;
+	margin-left: 6px;
+}
+
+.attribute .voting .positive:hover .glyphicon {
+	color: #6398E8;
+}
+.attribute .voting .negative:hover .glyphicon {
+	color: rgb(217,87,76);
+}
