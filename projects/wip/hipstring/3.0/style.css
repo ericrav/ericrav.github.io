@@ -11,6 +11,7 @@ ul {
 
 .navbar-default {
 	background-color: #261D1D;
+	border-color: #555;
 }
 .navbar-default .navbar-nav>li>a {
 	color: #999;
