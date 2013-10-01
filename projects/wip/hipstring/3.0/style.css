@@ -44,8 +44,11 @@ nav ul.nav.pull-right {
 	background-color: #6398E8;
 }
 
-.attributes {
+.main-container > div {
+	width: 40%;
 	display: inline-block;
+	float: left;
+	margin-left: 15px;
 }
 .attribute {
 	margin-bottom: 6px;
