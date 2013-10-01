@@ -47,9 +47,8 @@ nav ul.nav.pull-right {
 
 .main-container {
 	display: block;
-	overflow: auto;
+	overflow: hidden;
 	width: auto;
-	height: 100%;
 }
 
 .soundplayer {
