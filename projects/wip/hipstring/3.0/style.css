@@ -44,13 +44,14 @@ nav ul.nav.pull-right {
 	background-color: #6398E8;
 }
 
-.main-container > div {
+.soundplayer {
+	margin: 15px;
+}
+.attribute {
 	width: 40%;
 	display: inline-block;
 	float: left;
 	margin-left: 15px;
-}
-.attribute {
 	margin-bottom: 6px;
 }
 .attribute > h2 {
