@@ -1,6 +1,2 @@
-# Test
-
-page page page
-
-## Eric
-
+# ericrav
+My homepage and other projects and sandbox testing.
