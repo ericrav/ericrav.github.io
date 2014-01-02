@@ -28,7 +28,7 @@ body {
 }
 
 h1, h2, a {
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Merriweather', serif;
 	color: #211515;
 }
 .quote, p {
@@ -136,7 +136,7 @@ h1, h2, a {
 	text-align: center;
 }
 .headline h1{
-	width: 230px;
+	width: 280px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 0;
@@ -151,6 +151,7 @@ h1, h2, a {
 .navigation a {
 	display: inline-block;
 	font-size: 18px;
+	font-family: 'Merriweather', serif;
 	cursor: pointer;
 	margin: 9px;
 	color: #643E3E;
