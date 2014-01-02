@@ -5,7 +5,7 @@ $(document).keypress(function(e){
 	}
 });
 var hideAbout = function() {
-	$(".avatar").stop().show();
+	$(".avatar").stop().css("visibility", "");
 	$(".about-me").animate({"min-width":0}, {
 		step: function(now,fx){
 			$(this).css("-webkit-transform","rotateY("+(270+parseInt(now))+"deg)");
@@ -44,7 +44,7 @@ var showAbout = function() {
 				},
 				duration: 400,
 				complete: function(){
-					$(".avatar").hide();
+					$(".avatar").css("visibility", "hidden");
 					$(".about-me").addClass("shown");
 					$(document).one("click", hideAbout);
 				}
