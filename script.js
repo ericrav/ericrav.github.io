@@ -52,11 +52,7 @@ var showAbout = function() {
 		}
 	});
 }
-
-var width, height;
 $(document).ready(function(){
-	width = $(window).width();
-	height = $(window).height();
 	$("#about").click(function(e){
 		if ($(".about-me").hasClass("shown")) hideAbout();
 		else showAbout();
@@ -64,11 +60,5 @@ $(document).ready(function(){
 	});
 	$(".avatar .overlay").click(function(e){
 		if (!$(".about-me").hasClass("shown")) showAbout();
-	});
-
-	$(window).resize(function() {
-		width = $(window).width();
-		height = $(window).height();
-
 	});
 });
