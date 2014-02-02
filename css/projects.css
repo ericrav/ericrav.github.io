@@ -29,9 +29,6 @@
 	text-decoration: none;
 	background-color: #321F1F;
 }
-.navigation .links a.current{
-	width: 45px;
-}
 #blog, .navigation:hover #blog span{
 	transition-delay: .1s;
 	-webkit-transition-delay: .1s;
@@ -122,4 +119,8 @@ h1 {
 }
 .project .description{
 	overflow: auto;
+}
+.project .keywords{
+	font-size: 12px;
+	color: #5F5875;
 }
