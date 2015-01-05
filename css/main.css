@@ -54,14 +54,15 @@ html, body {
     font-size: 36px;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
+    border: 8px solid transparent;
 }
 #c1 h1 {
     color: #171d25;
-    border: 8px solid #171d25;
+    border-bottom-color: #171d25;
 }
 #c2 h1 {
     color: #E8E2DA;
-    border: 8px solid #E8E2DA;
+    border-bottom-color: #E8E2DA;
 }
 
 .links {
